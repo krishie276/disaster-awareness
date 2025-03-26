@@ -65,33 +65,34 @@
         <h2>Real-Time Disaster Alerts</h2>
         <input type="text" placeholder="Search for alerts...">
         <h1>Submit a Disaster Report</h1>
+    <!--Form to create report-->
     <form action="/submit_report" method="POST">  <!--replace "/submit_report with database link to store reports"-->
         <label for="disasterType">Type of Disaster</label>
-       <select id="disasterType" name="disasterType" required>
-        <option>Select a disaster type</option>
-        <option value="flood">Flood</option>
-        <option value="earthquake">Earthquake</option>
+        <!--Dropbox selection for disasterType-->
+        <select id="disasterType" name="disasterType">
+            <option value="" disabled selected>Select a disaster type</option>
+            <option value="flood">Flood</option>
+            <option value="earthquake">Earthquake</option>
        </select>
-        <!--<input type="text" id="disasterType" name="disasterType" placeholder="e.g., Flood, Earthquake" required>-->
-
+       <!--Dropbox selection for category-->
         <label for="category">Category</label>
         <select id="category" name="category" required>
             <option value="" disabled selected>Select a category</option>
             <option value="Natural">Natural</option>
             <option value="Man-Made">Man-Made</option>
         </select>
-
+        <!--Textbox used for entering location-->
         <label for="location">Location</label>
         <input type="text" id="location" name="location" placeholder="Enter the location" required>
-
+        <!--Textbox for describing desaster-->
         <label for="description">Description</label>
         <textarea id="description" name="description" rows="5" placeholder="Provide a detailed description" required></textarea>
 
+        <!--Button to submit report, to database-->
         <button type="submit" class="submit-button">Submit Report</button>
-        <button type="close" class="close-button" onclick="closeReport()">Close Report</button> 
+        <!--Button to close report, sends back to index.html-->
+        <button type="close" class="close-button" onclick="closeReport(index.html)">Close Report</button> 
     </form>
-            
-        </div>
     </section>
 </body>
 </html>
