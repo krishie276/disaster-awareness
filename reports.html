@@ -2,13 +2,59 @@
 <html>
 <head>
     <title>Disaster Alert System - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea, select {
+            width: 100%;
+            margin-top: 5px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-button {
+            background-color: #007BFF;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+        .close-button {
+            background-color: #FF0000;
+            margin-left: 250px;
+        }
+        .close-button:hover {
+            background-color: #CC0000;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Disaster Alert System</h1>
         <nav>
             <ul>
-                <li><a href="guides.html">Disaster Guides</a></li>
+                <li><a href="dg.html">Disaster Guides</a></li>
                 <li><a href="reports.html">User Reports</a></li>
                 <li><a href="map.html">Interactive Map</a></li>
                 <!--<li><a href="history.html">Past Disasters</a></li>-->
@@ -18,9 +64,34 @@
     <section>
         <h2>Real-Time Disaster Alerts</h2>
         <input type="text" placeholder="Search for alerts...">
-        <ul>
-            <li>Disaster Type - Location - Severity - Date & Time</li>
-        </ul>
+        <h1>Submit a Disaster Report</h1>
+    <form action="/submit_report" method="POST">  <!--replace "/submit_report with database link to store reports"-->
+        <label for="disasterType">Type of Disaster</label>
+       <select id="disasterType" name="disasterType" required>
+        <option>Select a disaster type</option>
+        <option value="flood">Flood</option>
+        <option value="earthquake">Earthquake</option>
+       </select>
+        <!--<input type="text" id="disasterType" name="disasterType" placeholder="e.g., Flood, Earthquake" required>-->
+
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="Natural">Natural</option>
+            <option value="Man-Made">Man-Made</option>
+        </select>
+
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="Enter the location" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="5" placeholder="Provide a detailed description" required></textarea>
+
+        <button type="submit" class="submit-button">Submit Report</button>
+        <button type="close" class="close-button" onclick="closeReport()">Close Report</button> 
+    </form>
+            
+        </div>
     </section>
 </body>
 </html>
