@@ -1,26 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Disaster Alert System - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Awareness Platform</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <header>
-        <h1>Disaster Alert System</h1>
-        <nav>
-            <ul>
-                <li><a href="guides.html">Disaster Guides</a></li>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="reports.html">User Reports</a></li>
-                <li><a href="map.html">Interactive Map</a></li>
-                <!--<li><a href="history.html">Past Disasters</a></li>-->
+                <li><a href="map.html">Maps</a></li>
+                <li><a href="dg.html">Disaster Guide</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Stay Prepared, Stay Safe</h1>
+            <p>Stay Safe. Stay Informed. Real-Time Disaster Alerts for the Caribbean</p>
+        </div>
     </header>
-    <section>
-        <h2>Real-Time Disaster Alerts</h2>
-        <input type="text" placeholder="Search for alerts...">
-        <ul>
-            <li>Disaster Type - Location - Severity - Date & Time</li>
-        </ul>
+
+    <!-- About Section -->
+    <section class="about">
+        <p>We are a disaster awareness and response platform designed for the Caribbean. It provides real-time disaster alerts, emergency preparedness guides, interactive disaster maps, and a community-driven reporting system to help users stay informed and respond effectively to natural disasters.</p>
     </section>
+
+    <!-- Sections Breakdown -->
+
+    <!-- User Reports Section -->
+    <section class="section">
+        <h2>User Reports</h2>
+        <p>Stay alert and contribute to disaster awareness by sharing real-time updates. Our website allows users to report ongoing disasters, including location, time, and severity. Reports from other users are displayed on an interactive feed to keep all users updated with the latest news. Verified reports are prioritized to prevent misinformation. Users may also upload images or videos for clarity. Additionally, official government alerts are displayed together with user reports to provide a comprehensive view of ongoing events. <a href="#">learn more..</a></p>
+    </section>
+
+    <!-- Maps Section -->
+    <section class="section">
+        <h2>Maps</h2>
+        <p>Our interactive disaster maps provide real-time tracking of emergencies across different regions. Identify high-risk zones for hurricanes, earthquakes, floods, and wildfires while also gaining access to historical disaster data and future risk predictions. Users can view evacuation routes, locate nearby shelters, and track active disasters as they unfold. GPS integration helps pinpoint the nearest emergency services, while weather alerts provide updates on extreme conditions. <a href="#">learn more..</a></p>
+    </section>
+
+    <!-- Disaster Guide Section with Carousel -->
+    <section class="section disaster-guide">
+        <h2>Disaster Guide</h2>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="slide">
+                    <img src="/image/hurricanes.jpg" alt="Hurricanes">
+                    <p>Hurricanes</p>
+                </div>
+                <div class="slide">
+                    <img src="/image/flooding.jpg" alt="Flooding">
+                    <p>Floods</p>
+                </div>
+                <div class="slide">
+                    <img src="/image/earthquake.jpeg" alt="Earthquake">
+                    <p>Earthquake</p>
+                </div>
+                <div class="slide">
+                    <img src="/image/tsunamis.jpg" alt="Tsunamis">
+                    <p>Tsunamis</p>
+                </div>
+            </div>
+            <button id="prev">←</button>
+            <button id="next">→</button>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts Section -->
+    <section class="section">
+        <h2>Emergency Contacts</h2>
+        <p>Access crucial emergency numbers for first responders, disaster relief agencies, and local support organizations. Our directory includes contact information for police, fire departments, ambulances, hospitals, and NGOs offering assistance during crises. With a one-click call feature, users can quickly connect with the appropriate services in case of an emergency. The platform also provides information on government aid programs and post-disaster support resources. <a href="#">learn more..</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">Emergency Contacts</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </footer>
+
+    <script src="carousel.js"></script>
 </body>
 </html>

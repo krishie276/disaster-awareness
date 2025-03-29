@@ -1,0 +1,155 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #3572EF;
+    padding: 10px;
+}
+
+.nav-container {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('/image/flood.png') no-repeat center center/cover;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 28px;
+}
+
+.hero-content p {
+    font-size: 16px;
+}
+
+/* About Section */
+.about {
+    padding: 20px;
+    margin: 15px;
+    border-radius: 5px;
+   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
+}
+
+/* Section Styling */
+.section {
+    padding: 20px;
+    margin: 15px;
+    border-radius: 5px;
+      /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
+}
+
+/* Disaster Guide Carousel */
+.disaster-guide {
+    background: #93c9ff;
+    text-align: left;
+    padding: 20px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+}
+
+.carousel-container {
+    display: flex;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    text-align: center;
+}
+
+.slide img {
+    width: 200px;
+    height: auto;
+}
+
+/* Navigation Buttons */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #3572EF;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links li {
+    margin: 0 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
