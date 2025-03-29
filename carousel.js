@@ -42,3 +42,9 @@ prevButton.addEventListener("click", () => {
     prevSlide();
     resetInterval();
 });
+container.addEventListener('mouseover', () => {
+    clearInterval(autoSlide);
+});
+container.addEventListener('mouseout', () => {
+    autoSlide = setInterval(nextSlide, 3000);
+});
