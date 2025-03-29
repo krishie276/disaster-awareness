@@ -1,26 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Disaster Alert System - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Awareness Platform</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Disaster Alert System</h1>
-        <nav>
-            <ul>
-                <li><a href="guides.html">Disaster Guides</a></li>
-                <li><a href="reports.html">User Reports</a></li>
-                <li><a href="map.html">Interactive Map</a></li>
-                <!--<li><a href="history.html">Past Disasters</a></li>-->
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">User Reports</a></li>
+                <li><a href="#">Maps</a></li>
+                <li><a href="#">Disaster Guide</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Stay Prepared, Stay Safe</h1>
+            <p>Stay Safe. Stay Informed. Real-Time Disaster Alerts for the Caribbean</p>
+        </div>
     </header>
-    <section>
-        <h2>Real-Time Disaster Alerts</h2>
-        <input type="text" placeholder="Search for alerts...">
-        <ul>
-            <li>Disaster Type - Location - Severity - Date & Time</li>
-        </ul>
+
+    <!-- About Section -->
+    <section class="about">
+        <p>We are a disaster awareness and response platform designed for the Caribbean. It provides real-time disaster alerts, emergency preparedness guides, interactive disaster maps, and a community-driven reporting system to help users stay informed and respond effectively to natural disasters.</p>
     </section>
+
+    <!-- Sections Breakdown -->
+
+    <!-- User Reports Section -->
+    <section class="section">
+        <h2>User Reports</h2>
+        <p>Report disasters in real time and stay updated with reports from other users.</p>
+    </section>
+
+    <!-- Maps Section -->
+    <section class="section">
+        <h2>Maps</h2>
+        <p>Access interactive maps that show disaster-prone areas and live disaster tracking.</p>
+    </section>
+
+    <!-- Disaster Guide Section with Carousel -->
+    <section class="section disaster-guide">
+        <h2>Disaster Guide</h2>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="slide">
+                    <img src="hurricane.jpg" alt="Hurricanes">
+                    <p>Hurricanes</p>
+                </div>
+                <div class="slide">
+                    <img src="hurricane.jpg" alt="Hurricanes">
+                    <p>Hurricanes</p>
+                </div>
+                <div class="slide">
+                    <img src="hurricane3.jpg" alt="Hurricanes">
+                    <p>Hurricanes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts Section -->
+    <section class="section">
+        <h2>Emergency Contacts</h2>
+        <p>Find emergency contact numbers for your region.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">Emergency Contacts</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </footer>
+
 </body>
 </html>
