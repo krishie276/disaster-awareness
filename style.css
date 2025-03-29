@@ -74,12 +74,16 @@ nav {
 
 /* Disaster Guide Carousel */
 .disaster-guide {
-    background: #74ff74;
+    background: #93c9ff;
     text-align: center;
     padding: 20px;
 }
 
 .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     overflow: hidden;
     width: 80%;
     margin: auto;
@@ -87,6 +91,7 @@ nav {
 
 .carousel-container {
     display: flex;
+    width: 400%;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -98,6 +103,27 @@ nav {
 .slide img {
     width: 200px;
     height: auto;
+}
+
+/* Navigation Buttons */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
 }
 
 
