@@ -83,6 +83,8 @@ nav {
     background: #93c9ff;
     text-align: left;
     padding: 20px;
+    margin: 0;
+    width: 100%;
 }
 
 .carousel {
@@ -91,8 +93,8 @@ nav {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .carousel-container {
@@ -113,7 +115,12 @@ nav {
 
 /* Navigation Buttons */
 .arrows {
-    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    transform: translateY(-50%);
 }
 
 .arrow-btn {
@@ -125,6 +132,7 @@ nav {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    z-index: 10;
 }
 
 .arrow-btn:hover {
@@ -276,7 +284,7 @@ footer {
 
 
 /* FAQ Section */
-.section {
+.section-fqa {
     width: 80%;
     margin: 40px auto;
     /* background-color: #fff; */
@@ -286,13 +294,13 @@ footer {
     text-align: left;
 }
 
-.section h2 {
+.section-fqa h2 {
     font-size: 2em;
     margin-bottom: 20px;
     color: #333;
 }
 
-.section p {
+.section-fqa p {
     font-size: 1.2em;
     color: #555;
 }
