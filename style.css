@@ -107,18 +107,24 @@ nav {
 }
 
 /* Navigation Buttons */
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
+.arrows {
+    margin-top: 10px;
 }
 
+.arrow-btn {
+    background: #3572EF;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.arrow-btn:hover {
+    background: #003d82;
+}
 #prev {
     left: 10px;
 }
@@ -127,7 +133,20 @@ button {
     right: 10px;
 }
 
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #3572EF;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
 
+.btn:hover {
+    background: #003d82;
+}
 
 /* Footer */
 footer {
@@ -164,4 +183,35 @@ footer {
     .carousel-container {
         width: 300%;
     }
+}
+
+
+#country-select {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 20px 0;
+    display: block;
+}
+
+.country-contacts {
+    margin-top: 20px;
+}
+
+.country-contacts h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.country-contacts ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.country-contacts li {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.country-contacts li strong {
+    font-weight: bold;
 }

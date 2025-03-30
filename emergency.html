@@ -20,17 +20,25 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Emergency Contacts</h1>
+        </div>
+    </header>
+
     <!-- Emergency Contacts Section -->
     <section class="section">
-        <h2>Emergency Contacts</h2>
-
-        <!-- Country Selection Dropdown -->
         <label for="country-select">Select Your Country:</label>
         <select id="country-select">
             <option value="barbados">Barbados</option>
             <option value="jamaica">Jamaica</option>
             <option value="trinidad">Trinidad & Tobago</option>
             <option value="bahamas">Bahamas</option>
+            <option value="dominican_republic">Dominican Republic</option>
+            <option value="haiti">Haiti</option>
+            <option value="grenada">Grenada</option>
+            <option value="st_lucia">St. Lucia</option>
             <!-- Add more countries as needed -->
         </select>
 
@@ -84,16 +92,62 @@
                     <li><strong>National Disaster Management:</strong> +1 (242) 323-0485</li>
                 </ul>
             </div>
+
+            <!-- Dominican Republic Emergency Contacts -->
+            <div id="dominican_republic-contacts" class="country-contacts" style="display:none;">
+                <h3>Dominican Republic</h3>
+                <ul>
+                    <li><strong>Police:</strong> 911</li>
+                    <li><strong>Fire Department:</strong> 119</li>
+                    <li><strong>Ambulance:</strong> 911</li>
+                    <li><strong>Red Cross:</strong> +1 (809) 472-1515</li>
+                    <li><strong>National Disaster Management:</strong> +1 (809) 412-4500</li>
+                </ul>
+            </div>
+
+            <!-- Haiti Emergency Contacts -->
+            <div id="haiti-contacts" class="country-contacts" style="display:none;">
+                <h3>Haiti</h3>
+                <ul>
+                    <li><strong>Police:</strong> 114</li>
+                    <li><strong>Fire Department:</strong> 118</li>
+                    <li><strong>Ambulance:</strong> 118</li>
+                    <li><strong>Red Cross:</strong> +509 2811-0404</li>
+                    <li><strong>National Disaster Management:</strong> +509 2533-3939</li>
+                </ul>
+            </div>
+
+            <!-- Grenada Emergency Contacts -->
+            <div id="grenada-contacts" class="country-contacts" style="display:none;">
+                <h3>Grenada</h3>
+                <ul>
+                    <li><strong>Police:</strong> 911</li>
+                    <li><strong>Fire Department:</strong> 911</li>
+                    <li><strong>Ambulance:</strong> 911</li>
+                    <li><strong>Red Cross:</strong> +1 (473) 440-1755</li>
+                    <li><strong>National Disaster Management:</strong> +1 (473) 440-1002</li>
+                </ul>
+            </div>
+
+            <!-- St. Lucia Emergency Contacts -->
+            <div id="st_lucia-contacts" class="country-contacts" style="display:none;">
+                <h3>St. Lucia</h3>
+                <ul>
+                    <li><strong>Police:</strong> 999</li>
+                    <li><strong>Fire Department:</strong> 911</li>
+                    <li><strong>Ambulance:</strong> 911</li>
+                    <li><strong>Red Cross:</strong> +1 (758) 452-3873</li>
+                    <li><strong>National Disaster Management:</strong> +1 (758) 452-2121</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Script to Show/Hide Country Contacts -->
         <script>
             document.getElementById('country-select').addEventListener('change', function() {
-                // Hide all country contact sections
                 const countrySections = document.querySelectorAll('.country-contacts');
                 countrySections.forEach(section => section.style.display = 'none');
                 
-                // Show the selected country's contacts
                 const selectedCountry = this.value;
                 document.getElementById(selectedCountry + '-contacts').style.display = 'block';
             });
@@ -101,20 +155,12 @@
             // Initially show contacts for Barbados
             document.getElementById('barbados-contacts').style.display = 'block';
         </script>
-
     </section>
 
     <!-- Footer -->
     <footer>
-        <!-- <table class="footer-links">
-            <tr>
-                <th><a href="emergency_contacts.html">Emergency Contacts</a></th>
-                <th><a href="resources.html">Resources</a></th>
-                <th><a href="faq.html">FAQ</a></th>
-            </tr>
-        </table> -->
         <ul class="footer-links">
-            <li><a href="emergency.html">Emergency Contacts</a></li>
+            <li><a href="emergency_contacts.html">Emergency Contacts</a></li>
             <li><a href="resources.html">Resources</a></li>
             <li><a href="faq.html">FAQ</a></li>
         </ul>
