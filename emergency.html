@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Contacts</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+
 </head>
 <body>
 
@@ -28,19 +30,21 @@
     </header>
 
     <!-- Emergency Contacts Section -->
-    <section class="section">
+    <section class="section-emg">
         <label for="country-select">Select Your Country:</label>
         <select id="country-select">
-            <option value="barbados">Barbados</option>
-            <option value="jamaica">Jamaica</option>
-            <option value="trinidad">Trinidad & Tobago</option>
-            <option value="bahamas">Bahamas</option>
-            <option value="dominican_republic">Dominican Republic</option>
-            <option value="haiti">Haiti</option>
-            <option value="grenada">Grenada</option>
-            <option value="st_lucia">St. Lucia</option>
-            <!-- Add more countries as needed -->
+            <option value="barbados"><span class="fi fi-bb"></span> Barbados</option>
+            <option value="jamaica"><span class="fi fi-jm"></span> Jamaica</option>
+            <option value="trinidad"><span class="fi fi-tt"></span> Trinidad & Tobago</option>
+            <option value="bahamas"><span class="fi fi-bs"></span> Bahamas</option>
+            <option value="dominican_republic"><span class="fi fi-do"></span> Dominican Republic</option>
+            <option value="haiti"><span class="fi fi-ht"></span> Haiti</option>
+            <option value="grenada"><span class="fi fi-gd"></span> Grenada</option>
+            <option value="st_lucia"><span class="fi fi-lc"></span> St. Lucia</option>
         </select>
+        
+        
+    
 
         <!-- Emergency Contacts for Selected Country -->
         <div id="contacts">
