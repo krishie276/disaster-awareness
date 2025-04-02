@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reports.html">User Reports</a></li>
+                <li><a href="map.html">Maps</a></li>
+                <li><a href="dg.html">Disaster Guide</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Emergency Contacts</h1>
+        </div>
+    </header>
+
+    <!-- Emergency Contacts Section -->
+    <section class="section-emg">
+        <label for="country-select">Select Your Country:</label>
+        <select id="country-select">
+            <option value="barbados"><span class="fi fi-bb"></span> Barbados</option>
+            <option value="jamaica"><span class="fi fi-jm"></span> Jamaica</option>
+            <option value="trinidad"><span class="fi fi-tt"></span> Trinidad & Tobago</option>
+            <option value="bahamas"><span class="fi fi-bs"></span> Bahamas</option>
+            <option value="dominican_republic"><span class="fi fi-do"></span> Dominican Republic</option>
+            <option value="haiti"><span class="fi fi-ht"></span> Haiti</option>
+            <option value="grenada"><span class="fi fi-gd"></span> Grenada</option>
+            <option value="st_lucia"><span class="fi fi-lc"></span> St. Lucia</option>
+        </select>
+        
+        
+    
+
+        <!-- Emergency Contacts for Selected Country -->
+        <div id="contacts">
+            <!-- Barbados Emergency Contacts -->
+            <div id="barbados-contacts" class="country-contacts">
+                <h3>Barbados</h3>
+                <ul>
+                    <li><strong>Police:</strong> 211</li>
+                    <li><strong>Fire Department:</strong> 311</li>
+                    <li><strong>Ambulance:</strong> 511</li>
+                    <li><strong>Red Cross:</strong> +1 (246) 434-0959</li>
+                    <li><strong>Emergency Medical Services:</strong> 511</li>
+                    <li><strong>National Disaster Management:</strong> +1 (246) 427-2549</li>
+                </ul>
+            </div>
+
+            <!-- Jamaica Emergency Contacts -->
+            <div id="jamaica-contacts" class="country-contacts" style="display:none;">
+                <h3>Jamaica</h3>
+                <ul>
+                    <li><strong>Police:</strong> 119</li>
+                    <li><strong>Fire Department:</strong> 110</li>
+                    <li><strong>Ambulance:</strong> 110</li>
+                    <li><strong>Red Cross:</strong> +1 (876) 926-5110</li>
+                    <li><strong>National Disaster Management:</strong> +1 (876) 929-3760</li>
+                </ul>
+            </div>
+
+            <!-- Trinidad and Tobago Emergency Contacts -->
+            <div id="trinidad-contacts" class="country-contacts" style="display:none;">
+                <h3>Trinidad & Tobago</h3>
+                <ul>
+                    <li><strong>Police:</strong> 999</li>
+                    <li><strong>Fire Department:</strong> 990</li>
+                    <li><strong>Ambulance:</strong> 990</li>
+                    <li><strong>Red Cross:</strong> +1 (868) 628-0524</li>
+                    <li><strong>National Disaster Management:</strong> +1 (868) 800-0879</li>
+                </ul>
+            </div>
+
+            <!-- Bahamas Emergency Contacts -->
+            <div id="bahamas-contacts" class="country-contacts" style="display:none;">
+                <h3>Bahamas</h3>
+                <ul>
+                    <li><strong>Police:</strong> 911</li>
+                    <li><strong>Fire Department:</strong> 919</li>
+                    <li><strong>Ambulance:</strong> 919</li>
+                    <li><strong>Red Cross:</strong> +1 (242) 323-7373</li>
+                    <li><strong>National Disaster Management:</strong> +1 (242) 323-0485</li>
+                </ul>
+            </div>
+
+            <!-- Dominican Republic Emergency Contacts -->
+            <div id="dominican_republic-contacts" class="country-contacts" style="display:none;">
+                <h3>Dominican Republic</h3>
+                <ul>
+                    <li><strong>Police:</strong> 911</li>
+                    <li><strong>Fire Department:</strong> 119</li>
+                    <li><strong>Ambulance:</strong> 911</li>
+                    <li><strong>Red Cross:</strong> +1 (809) 472-1515</li>
+                    <li><strong>National Disaster Management:</strong> +1 (809) 412-4500</li>
+                </ul>
+            </div>
+
+            <!-- Haiti Emergency Contacts -->
+            <div id="haiti-contacts" class="country-contacts" style="display:none;">
+                <h3>Haiti</h3>
+                <ul>
+                    <li><strong>Police:</strong> 114</li>
+                    <li><strong>Fire Department:</strong> 118</li>
+                    <li><strong>Ambulance:</strong> 118</li>
+                    <li><strong>Red Cross:</strong> +509 2811-0404</li>
+                    <li><strong>National Disaster Management:</strong> +509 2533-3939</li>
+                </ul>
+            </div>
+
+            <!-- Grenada Emergency Contacts -->
+            <div id="grenada-contacts" class="country-contacts" style="display:none;">
+                <h3>Grenada</h3>
+                <ul>
+                    <li><strong>Police:</strong> 911</li>
+                    <li><strong>Fire Department:</strong> 911</li>
+                    <li><strong>Ambulance:</strong> 911</li>
+                    <li><strong>Red Cross:</strong> +1 (473) 440-1755</li>
+                    <li><strong>National Disaster Management:</strong> +1 (473) 440-1002</li>
+                </ul>
+            </div>
+
+            <!-- St. Lucia Emergency Contacts -->
+            <div id="st_lucia-contacts" class="country-contacts" style="display:none;">
+                <h3>St. Lucia</h3>
+                <ul>
+                    <li><strong>Police:</strong> 999</li>
+                    <li><strong>Fire Department:</strong> 911</li>
+                    <li><strong>Ambulance:</strong> 911</li>
+                    <li><strong>Red Cross:</strong> +1 (758) 452-3873</li>
+                    <li><strong>National Disaster Management:</strong> +1 (758) 452-2121</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Script to Show/Hide Country Contacts -->
+        <script>
+            document.getElementById('country-select').addEventListener('change', function() {
+                const countrySections = document.querySelectorAll('.country-contacts');
+                countrySections.forEach(section => section.style.display = 'none');
+                
+                const selectedCountry = this.value;
+                document.getElementById(selectedCountry + '-contacts').style.display = 'block';
+            });
+
+            // Initially show contacts for Barbados
+            document.getElementById('barbados-contacts').style.display = 'block';
+        </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="emergency_contacts.html">Emergency Contacts</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
