@@ -6,10 +6,65 @@
     <title>Emergency Contacts</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
-
+    <style>
+      
+        
+        /* Center the main content */
+        .main-content {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+        
+        /* Left-align all text content */
+        .text-left {
+            text-align: left;
+        }
+        
+        
+        /* Emergency contacts section */
+        .section-emg {
+            margin: 30px 0;
+        }
+        
+        select {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            margin: 15px 0;
+        }
+        
+        .contact-card {
+            background: #f8f9fa;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 0 5px 5px 0;
+            text-align: left;
+        }
+        
+        .contact-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .contact-number {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+        
+        .fi {
+            margin-right: 8px;
+            box-shadow: 0 0 2px rgba(0,0,0,0.2);
+        }
+        
+     
+    </style>
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
@@ -25,141 +80,44 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Emergency Contacts</h1>
+            <h1>Caribbean Emergency Contacts</h1>
         </div>
     </header>
+  
+    <!-- Main Content Container -->
+    <div class="main-content text-left">
+        <section class="section-emg">
+            <label for="country-select">Select Your Country:</label>
+            <select id="country-select">
+                <option value="ai"><span class="fi fi-ai"></span> Anguilla</option>
+                <option value="ag"><span class="fi fi-ag"></span> Antigua & Barbuda</option>
+                <option value="bs"><span class="fi fi-bs"></span> Bahamas</option>
+                <option value="bb"><span class="fi fi-bb"></span> Barbados</option>
+                <option value="vg"><span class="fi fi-vg"></span> British Virgin Islands</option>
+                <option value="ky"><span class="fi fi-ky"></span> Cayman Islands</option>
+                <option value="cu"><span class="fi fi-cu"></span> Cuba</option>
+                <option value="dm"><span class="fi fi-dm"></span> Dominica</option>
+                <option value="do"><span class="fi fi-do"></span> Dominican Republic</option>
+                <option value="gd"><span class="fi fi-gd"></span> Grenada</option>
+                <option value="gp"><span class="fi fi-gp"></span> Guadeloupe</option>
+                <option value="ht"><span class="fi fi-ht"></span> Haiti</option>
+                <option value="jm"><span class="fi fi-jm"></span> Jamaica</option>
+                <option value="mq"><span class="fi fi-mq"></span> Martinique</option>
+                <option value="ms"><span class="fi fi-ms"></span> Montserrat</option>
+                <option value="pr"><span class="fi fi-pr"></span> Puerto Rico</option>
+                <option value="kn"><span class="fi fi-kn"></span> St. Kitts & Nevis</option>
+                <option value="lc"><span class="fi fi-lc"></span> St. Lucia</option>
+                <option value="vc"><span class="fi fi-vc"></span> St. Vincent & Grenadines</option>
+                <option value="tt"><span class="fi fi-tt"></span> Trinidad & Tobago</option>
+                <option value="tc"><span class="fi fi-tc"></span> Turks & Caicos</option>
+                <option value="vi"><span class="fi fi-vi"></span> US Virgin Islands</option>
+            </select>
+        </section>
 
-    <!-- Emergency Contacts Section -->
-    <section class="section-emg">
-        <label for="country-select">Select Your Country:</label>
-        <select id="country-select">
-            <option value="barbados"><span class="fi fi-bb"></span> Barbados</option>
-            <option value="jamaica"><span class="fi fi-jm"></span> Jamaica</option>
-            <option value="trinidad"><span class="fi fi-tt"></span> Trinidad & Tobago</option>
-            <option value="bahamas"><span class="fi fi-bs"></span> Bahamas</option>
-            <option value="dominican_republic"><span class="fi fi-do"></span> Dominican Republic</option>
-            <option value="haiti"><span class="fi fi-ht"></span> Haiti</option>
-            <option value="grenada"><span class="fi fi-gd"></span> Grenada</option>
-            <option value="st_lucia"><span class="fi fi-lc"></span> St. Lucia</option>
-        </select>
-        
-        
-    
-
-        <!-- Emergency Contacts for Selected Country -->
-        <div id="contacts">
-            <!-- Barbados Emergency Contacts -->
-            <div id="barbados-contacts" class="country-contacts">
-                <h3>Barbados</h3>
-                <ul>
-                    <li><strong>Police:</strong> 211</li>
-                    <li><strong>Fire Department:</strong> 311</li>
-                    <li><strong>Ambulance:</strong> 511</li>
-                    <li><strong>Red Cross:</strong> +1 (246) 434-0959</li>
-                    <li><strong>Emergency Medical Services:</strong> 511</li>
-                    <li><strong>National Disaster Management:</strong> +1 (246) 427-2549</li>
-                </ul>
-            </div>
-
-            <!-- Jamaica Emergency Contacts -->
-            <div id="jamaica-contacts" class="country-contacts" style="display:none;">
-                <h3>Jamaica</h3>
-                <ul>
-                    <li><strong>Police:</strong> 119</li>
-                    <li><strong>Fire Department:</strong> 110</li>
-                    <li><strong>Ambulance:</strong> 110</li>
-                    <li><strong>Red Cross:</strong> +1 (876) 926-5110</li>
-                    <li><strong>National Disaster Management:</strong> +1 (876) 929-3760</li>
-                </ul>
-            </div>
-
-            <!-- Trinidad and Tobago Emergency Contacts -->
-            <div id="trinidad-contacts" class="country-contacts" style="display:none;">
-                <h3>Trinidad & Tobago</h3>
-                <ul>
-                    <li><strong>Police:</strong> 999</li>
-                    <li><strong>Fire Department:</strong> 990</li>
-                    <li><strong>Ambulance:</strong> 990</li>
-                    <li><strong>Red Cross:</strong> +1 (868) 628-0524</li>
-                    <li><strong>National Disaster Management:</strong> +1 (868) 800-0879</li>
-                </ul>
-            </div>
-
-            <!-- Bahamas Emergency Contacts -->
-            <div id="bahamas-contacts" class="country-contacts" style="display:none;">
-                <h3>Bahamas</h3>
-                <ul>
-                    <li><strong>Police:</strong> 911</li>
-                    <li><strong>Fire Department:</strong> 919</li>
-                    <li><strong>Ambulance:</strong> 919</li>
-                    <li><strong>Red Cross:</strong> +1 (242) 323-7373</li>
-                    <li><strong>National Disaster Management:</strong> +1 (242) 323-0485</li>
-                </ul>
-            </div>
-
-            <!-- Dominican Republic Emergency Contacts -->
-            <div id="dominican_republic-contacts" class="country-contacts" style="display:none;">
-                <h3>Dominican Republic</h3>
-                <ul>
-                    <li><strong>Police:</strong> 911</li>
-                    <li><strong>Fire Department:</strong> 119</li>
-                    <li><strong>Ambulance:</strong> 911</li>
-                    <li><strong>Red Cross:</strong> +1 (809) 472-1515</li>
-                    <li><strong>National Disaster Management:</strong> +1 (809) 412-4500</li>
-                </ul>
-            </div>
-
-            <!-- Haiti Emergency Contacts -->
-            <div id="haiti-contacts" class="country-contacts" style="display:none;">
-                <h3>Haiti</h3>
-                <ul>
-                    <li><strong>Police:</strong> 114</li>
-                    <li><strong>Fire Department:</strong> 118</li>
-                    <li><strong>Ambulance:</strong> 118</li>
-                    <li><strong>Red Cross:</strong> +509 2811-0404</li>
-                    <li><strong>National Disaster Management:</strong> +509 2533-3939</li>
-                </ul>
-            </div>
-
-            <!-- Grenada Emergency Contacts -->
-            <div id="grenada-contacts" class="country-contacts" style="display:none;">
-                <h3>Grenada</h3>
-                <ul>
-                    <li><strong>Police:</strong> 911</li>
-                    <li><strong>Fire Department:</strong> 911</li>
-                    <li><strong>Ambulance:</strong> 911</li>
-                    <li><strong>Red Cross:</strong> +1 (473) 440-1755</li>
-                    <li><strong>National Disaster Management:</strong> +1 (473) 440-1002</li>
-                </ul>
-            </div>
-
-            <!-- St. Lucia Emergency Contacts -->
-            <div id="st_lucia-contacts" class="country-contacts" style="display:none;">
-                <h3>St. Lucia</h3>
-                <ul>
-                    <li><strong>Police:</strong> 999</li>
-                    <li><strong>Fire Department:</strong> 911</li>
-                    <li><strong>Ambulance:</strong> 911</li>
-                    <li><strong>Red Cross:</strong> +1 (758) 452-3873</li>
-                    <li><strong>National Disaster Management:</strong> +1 (758) 452-2121</li>
-                </ul>
-            </div>
+        <div id="contacts-container">
+            <!-- Contacts will load here -->
         </div>
-
-        <!-- Script to Show/Hide Country Contacts -->
-        <script>
-            document.getElementById('country-select').addEventListener('change', function() {
-                const countrySections = document.querySelectorAll('.country-contacts');
-                countrySections.forEach(section => section.style.display = 'none');
-                
-                const selectedCountry = this.value;
-                document.getElementById(selectedCountry + '-contacts').style.display = 'block';
-            });
-
-            // Initially show contacts for Barbados
-            document.getElementById('barbados-contacts').style.display = 'block';
-        </script>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -170,5 +128,216 @@
         </ul>
     </footer>
 
+    <script>
+        // Complete emergency contacts database for all Caribbean countries
+        const EMERGENCY_CONTACTS = {
+            ai: { // Anguilla
+                name: "Anguilla",
+                contacts: [
+                    { name: "Police Emergency", number: "911" },
+                    { name: "Medical Emergency", number: "911" },
+                    { name: "Fire Department", number: "911" }
+                ]
+            },
+            ag: { // Antigua & Barbuda
+                name: "Antigua & Barbuda",
+                contacts: [
+                    { name: "Police Emergency", number: "911" },
+                    { name: "Medical Emergency", number: "911" },
+                    { name: "Fire Department", number: "911" },
+                    { name: "Coast Guard", number: "+1 268-462-0767" }
+                ]
+            },
+            bs: { // Bahamas
+                name: "Bahamas",
+                contacts: [
+                    { name: "Police Emergency", number: "911" },
+                    { name: "Medical Emergency", number: "919" },
+                    { name: "Fire Department", number: "919" }
+                ]
+            },
+            bb: { // Barbados
+                name: "Barbados",
+                contacts: [
+                    { name: "Police Emergency", number: "211" },
+                    { name: "Medical Emergency", number: "511" },
+                    { name: "Fire Department", number: "311" },
+                    { name: "Coast Guard", number: "+1 246-538-0201" }
+                ]
+            },
+            vg: { // British Virgin Islands
+                name: "British Virgin Islands",
+                contacts: [
+                    { name: "All Emergencies", number: "911" },
+                    { name: "Police HQ", number: "+1 284-494-3822" }
+                ]
+            },
+            ky: { // Cayman Islands
+                name: "Cayman Islands",
+                contacts: [
+                    { name: "All Emergencies", number: "911" },
+                    { name: "Police HQ", number: "+1 345-949-4222" }
+                ]
+            },
+            cu: { // Cuba
+                name: "Cuba",
+                contacts: [
+                    { name: "Police Emergency", number: "106" },
+                    { name: "Medical Emergency", number: "104" },
+                    { name: "Fire Department", number: "105" }
+                ]
+            },
+            dm: { // Dominica
+                name: "Dominica",
+                contacts: [
+                    { name: "Police Emergency", number: "999" },
+                    { name: "Medical Emergency", number: "999" },
+                    { name: "Fire Department", number: "999" }
+                ]
+            },
+            do: { // Dominican Republic
+                name: "Dominican Republic",
+                contacts: [
+                    { name: "All Emergencies", number: "911" },
+                    { name: "Tourist Police", number: "+1 809-200-3500" }
+                ]
+            },
+            gd: { // Grenada
+                name: "Grenada",
+                contacts: [
+                    { name: "Police Emergency", number: "911" },
+                    { name: "Medical Emergency", number: "434" },
+                    { name: "Fire Department", number: "911" }
+                ]
+            },
+            gp: { // Guadeloupe
+                name: "Guadeloupe",
+                contacts: [
+                    { name: "All Emergencies", number: "112" },
+                    { name: "Police", number: "17" },
+                    { name: "Medical", number: "15" }
+                ]
+            },
+            ht: { // Haiti
+                name: "Haiti",
+                contacts: [
+                    { name: "Police Emergency", number: "114" },
+                    { name: "Medical Emergency", number: "118" },
+                    { name: "Fire Department", number: "118" }
+                ]
+            },
+            jm: { // Jamaica
+                name: "Jamaica",
+                contacts: [
+                    { name: "Police Emergency", number: "119" },
+                    { name: "Medical Emergency", number: "110" },
+                    { name: "Fire Department", number: "110" }
+                ]
+            },
+            mq: { // Martinique
+                name: "Martinique",
+                contacts: [
+                    { name: "All Emergencies", number: "112" },
+                    { name: "Police", number: "17" },
+                    { name: "Medical", number: "15" }
+                ]
+            },
+            ms: { // Montserrat
+                name: "Montserrat",
+                contacts: [
+                    { name: "All Emergencies", number: "911" },
+                    { name: "Police HQ", number: "+1 664-491-2555" }
+                ]
+            },
+            pr: { // Puerto Rico
+                name: "Puerto Rico",
+                contacts: [
+                    { name: "All Emergencies", number: "911" },
+                    { name: "Tourist Police", number: "+1 787-724-0124" }
+                ]
+            },
+            kn: { // St. Kitts & Nevis
+                name: "St. Kitts & Nevis",
+                contacts: [
+                    { name: "Police Emergency", number: "911" },
+                    { name: "Medical Emergency", number: "911" },
+                    { name: "Fire Department", number: "911" }
+                ]
+            },
+            lc: { // St. Lucia
+                name: "St. Lucia",
+                contacts: [
+                    { name: "Police Emergency", number: "911" },
+                    { name: "Medical Emergency", number: "911" },
+                    { name: "Fire Department", number: "911" }
+                ]
+            },
+            vc: { // St. Vincent & Grenadines
+                name: "St. Vincent & Grenadines",
+                contacts: [
+                    { name: "Police Emergency", number: "911" },
+                    { name: "Medical Emergency", number: "911" },
+                    { name: "Fire Department", number: "911" }
+                ]
+            },
+            tt: { // Trinidad & Tobago
+                name: "Trinidad & Tobago",
+                contacts: [
+                    { name: "Police Emergency", number: "999" },
+                    { name: "Medical Emergency", number: "990" },
+                    { name: "Fire Department", number: "990" }
+                ]
+            },
+            tc: { // Turks & Caicos
+                name: "Turks & Caicos",
+                contacts: [
+                    { name: "All Emergencies", number: "911" },
+                    { name: "Police HQ", number: "+1 649-946-4259" }
+                ]
+            },
+            vi: { // US Virgin Islands
+                name: "US Virgin Islands",
+                contacts: [
+                    { name: "All Emergencies", number: "911" },
+                    { name: "Police HQ", number: "+1 340-774-2211" }
+                ]
+            }
+        };
+
+        // Display contacts for selected country
+        function displayContacts(countryCode) {
+            const countryData = EMERGENCY_CONTACTS[countryCode];
+            const container = document.getElementById('contacts-container');
+            
+            if (!countryData) {
+                container.innerHTML = `<p>No emergency contacts available for this country.</p>`;
+                return;
+            }
+            
+            let html = `<h2>${countryData.name} Emergency Numbers</h2>`;
+            
+            countryData.contacts.forEach(contact => {
+                const cleanNumber = contact.number.replace(/[^0-9+]/g, '');
+                html += `
+                    <div class="contact-card">
+                        <h3>${contact.name}</h3>
+                        <div class="contact-number">
+                            <a href="tel:${cleanNumber}">${contact.number}</a>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        // Initialize and set up event listener
+        document.getElementById('country-select').addEventListener('change', function() {
+            displayContacts(this.value);
+        });
+
+        // Show initial contacts (Barbados)
+        displayContacts('bb');
+    </script>
 </body>
 </html>
