@@ -1,55 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Disaster Alert System - Home</title>
+    <title>Disaster Reports - Home</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input, textarea, select {
-            width: 100%;
-            margin-top: 5px;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .submit-button {
-            background-color: #007BFF;
-        }
-        .submit-button:hover {
-            background-color: #0056b3;
-        }
-        .close-button {
-            background-color: #FF0000;
-            margin-left: 250px;
-        }
-        .close-button:hover {
-            background-color: #CC0000;
-        }
-    </style>
+    <link rel="javascript" href="reports.js">
+    
 </head>
+<style>
+    .report-box {
+        padding: none;
+        text-align: center;
+    }
+    .report-heading, h1 {
+        font-size: xx-large; 
+        text-align: center;
+    }
+    .report-cards {
+        border: 2px solid gray;
+        padding: 50px;
+    }
+</style>
 <body>
         <!-- Navigation Bar -->
         <nav>
@@ -70,38 +40,62 @@
                 <p>Stay Safe. Stay Informed. Real-Time Disaster Alerts for the Caribbean</p>
             </div>
         </header>
-    <section>
-        <h2>Real-Time Disaster Alerts</h2>
-        <input type="text" placeholder="Search for alerts...">
-        <h1>Submit a Disaster Report</h1>
-    <!--Form to create report-->
-    <form action="/submit_report" method="POST">  <!--replace "/submit_report with database link to store reports"-->
-        <label for="disasterType">Type of Disaster</label>
-        <!--Dropbox selection for disasterType-->
-        <select id="disasterType" name="disasterType">
-            <option value="" disabled selected>Select a disaster type</option>
-            <option value="flood">Flood</option>
-            <option value="earthquake">Earthquake</option>
-       </select>
-       <!--Dropbox selection for category-->
-        <label for="category">Category</label>
-        <select id="category" name="category" required>
-            <option value="" disabled selected>Select a category</option>
-            <option value="Natural">Natural</option>
-            <option value="Man-Made">Man-Made</option>
-        </select>
-        <!--Textbox used for entering location-->
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location" placeholder="Enter the location" required>
-        <!--Textbox for describing desaster-->
-        <label for="description">Description</label>
-        <textarea id="description" name="description" rows="5" placeholder="Provide a detailed description" required></textarea>
+  <!---->      
+    <div>
+        <section class="section report-a-disaster">
+        <h1 class="report-heading">Disaster Reports</h1><br>
+            <div class="report-box">
+                <h4>Stay aware, stay prepared—report disasters to protect your community!</h4><br><br>
+                <a href="reportsForm.html" class="btn" style="float: none;"> Create a Report</a>
+            </div>
+        </section>
+    </div>
 
-        <!--Button to submit report, to database-->
-        <button type="submit" class="submit-button">Submit Report</button>
-        <!--Button to close report, sends back to index.html-->
-        <button type="close" class="close-button" onclick="closeReport(index.html)">Close Report</button> 
-    </form>
+    <!--Report Category Natural-->
+    <section class="section category-natural-disasters">
+        <h2>Natural Disasters</h2><br>
+        <div class="report-cards">
+            <p>Natural disasters are powerful and often devastating events caused by Earth's natural forces.
+                They can occur anywhere and vary in impact, from localized destruction to widespread catastrophe.</p><br>
+                <ul>
+                    <li><b>Geological Disasters:</b> Earthquakes, tsunamis, volcanic eruptions, landslides.</li>
+                    <li><b>Meteorological Disasters:</b> Hurricanes, tornadoes, blizzards, heatwaves.</li>
+                    <li><b>Hydrological Disasters:</b> Floods, storm surges, droughts.</li>
+                    <li><b>Volcanic Eruptions:</b> Explosive discharge of lava, ash, and gases from a volcano.</li>
+                    <li><b>Biological Disasters:</b> Pandemics, pest infestations.</li>
+                </ul>
+            <a href="#">Veiw Reports</a>
+        </div>
     </section>
+    
+    <!--Report Category Man-Made-->
+    <section class="section category-manmade-disasters">
+        <h2>Man-Made Disasters</h2><br>
+        <div class="report-cards"> 
+            <p>Man-made disasters are catastrophic events caused by human actions, either intentional or accidental.
+                They often result in significant harm to people, property, and the environment.</p><br>
+                <ul>
+                    <li><b>Industrial Accidents:</b> Explosions, chemical spills, or factory fires, such as the Bhopal gas tragedy.</li>
+                    <li><b>Nuclear Disasters:</b> Radiation leaks or reactor meltdowns, like the Chernobyl disaster.</li>
+                    <li><b>Transportation Accidents:</b> Large-scale crashes involving planes, trains, or ships.</li>
+                    <li><b>Environmental Damage:</b> Deforestation, pollution, or oil spills, such as the Deepwater Horizon spill.</li>
+                    <li><b>Conflict and War:</b> Bombings, armed conflicts, or acts of terrorism.</li>
+                    <li><b>Technological Failures:</b> Power grid failures, cyber attacks.</li>
+                </ul>
+            <a href="#">Veiw Reports</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <!-- <table class="footer-links">
+            <tr><th>Emergency Contacts</th> <th>Resources</th> <th>FAQ</th></tr>
+            <tr> </tr>
+        </table> -->
+        <ul class="footer-links">
+            <li><a href="emergency.html">Emergency Contacts</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
