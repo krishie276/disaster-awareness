@@ -169,6 +169,7 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    z-index: 1000; /* Ensures that the footer is above everything */
 }
 
 .footer-links {
@@ -323,4 +324,171 @@ ul li p {
     font-size: 1.2em;
     color: #555;
     margin-left: 20px;
+}
+
+/*Layout Containers*/
+#mapRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 20px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#filterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 90%;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+#mapWrapper {
+    position: relative;
+    flex-grow: 1;
+    max-width: 85%;
+}
+
+#map {
+    height: calc(110vh - 140px); /* accounts for nav/hero */
+    width: 80%;
+    border: 2px solid #3572EF;
+    box-sizing: border-box;
+}
+
+/* Filter & Button UI */
+
+#resetBtn {
+    height: fit-content;
+    padding: 8px 12px;
+    background-color: #3572EF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#filterWrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+#filterBtn {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+
+#dropdownBox {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 5px;
+    background-color: #D9D9D9;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 180px;
+    display: none;
+    flex-direction: column;
+    z-index: 11;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+  
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+  
+/* Alerts Section */
+#alertSection {
+    padding: 30px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.alerts {
+    background: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+  
+.alerts h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+  
+.alerts input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    margin-bottom: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+  
+.alerts ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+  
+.alerts li {
+    font-size: 16px;
+}
+
+/* Disaster Hero Banner */
+
+#disaster-hero {
+    height: 250px;
+    background: url('MAPS_Images.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+  
+#disaster-hero.shrink {
+    height: 100px;
+}
+  
+#disaster-hero .hero-content h1 {
+    font-size: 28px;
+    transition: font-size 0.3s ease;
+}
+  
+#disaster-hero.shrink .hero-content h1 {
+    font-size: 20px;
+}
+  
+#disaster-hero .hero-content p {
+    font-size: 16px;
+    transition: font-size 0.3s ease;
+}
+  
+#disaster-hero.shrink .hero-content p {
+    font-size: 12px;
 }
