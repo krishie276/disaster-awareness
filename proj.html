@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <style>
+
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+}
+
+
+
+/*section{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #004274;
+    position: relative;
+    height: 40px;
+}*/
+
+nav {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    background: #178ee8;
+    position: relative;
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-left: auto; 
+}
+
+nav ul li {
+    text-align: right;
+    padding: 0 20px; 
+    list-style-type: none;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.Disaster{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 300px; 
+}
+
+
+.Hold3 {
+  display: flex;
+  justify-content: space-around; 
+  margin-top: 2%;
+}
+
+.Hold4 {
+  display: flex;
+  justify-content: space-around; 
+  margin-top: 2%;
+}
+
+.newset {
+  width: 33%; 
+}
+
+.search-bar {
+      display: flex;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+
+    .search-bar input[type="search"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-right: none;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+    }
+
+
+    .search-bar button {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-left: none;
+      background-color: #4dadf6;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+
+
+    .search-bar button:hover {
+      background-color: #178ee8;
+    }
+
+    footer {
+
+    align-items: center; 
+    padding: 20px 30px;
+    background: #178ee8;
+    position: relative;
+    height: 60px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-left: auto; 
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    text-align: center;
+    padding: 0 20px; 
+    list-style-type: none;
+
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+    </style>
+    
+    <title>Disaster</title>
+</head>
+
+<body>
+    
+
+
+    <nav>
+
+        <ul id="navigation">
+            <li><a href="">Home</a></li>
+            <li><a href="">User Reports</a></li>
+            <li><a href="">Maps</a></li>
+            <li><a href="">Disaster Guide</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="overlay">
+        <img src="d507e2ba6137c510b617db15ffdc5a15.png" alt="Disaster" style="height: 300px; width: 100%;">
+        <div class="Disaster">
+          <u style="font-size: 40px; color: #fff;">Disaster Preparedness & Safety Guides</u>
+        </div>
+      </div>
+
+      <form action="/search" method="GET" class="search-bar" style="margin-right: 0%;">
+        <input type="search" name="query" placeholder="Search...">
+        <button type="submit">Search</button>
+      </form>
+      
+<div class="Hold3">      
+      <div class="newset" style="margin-left: 10%;margin-top: 5%; width: 33%;" >
+        <img src="d689bb878c7ee41367ef81535b4dd242.png" alt="Hurricanes">
+
+        <h1 style="margin-left: 4%;">Hurricanes</h1>
+        <P>A powerful tropical storm with heavy rain</P>
+        <p>and strong winds.</p>
+        <p>Preparedness tips:</p>
+        <ul id="Preparedness">
+            <li>Secure outdoor objects</li>
+            <li>Stock emergency supplies(food,water,batteries)</li>
+            <li>Know you evacuation route</li>
+
+        </ul>
+        <a href="Others.html">learn more</a>
+      </div>
+
+
+      <div class="newset" style="margin-left: 10%;margin-top: 5%;">
+        <img src="7be96b1b2f1511011d70515f8a9f97f1.png" alt="EarthQuake" style="height: 200px; width: 265px;">
+
+        <h1 style="margin-left: 4%;">EarthQuake</h1>
+        <P>Sudden shaking of the ground caused by</P>
+        <p>tectonic shifts.</p>
+        <p>Preparedness tips:</p>
+        <ul id="Preparedness">
+            <li>Drop, cover and hold on during shaking</li>
+            <li>Identify safe spots(under sturdy funiture)</li>
+            <li>Prepare an emergency kit with food, water and first-aid</li>
+
+        </ul>
+        <a href="Others.html">learn more</a>
+      </div>
+
+
+        <div class="newset" style="margin-left: 10%;margin-top: 5%; width: 33%; " >
+            <img src="182a89d3326fc60e558e05fcafe29cf7.png" alt="Flood" style="height: 200px; width: 265px;" >
+    
+            <h1 style="margin-left: 4%;">Hurricanes</h1>
+            <P>Overflow of water onto dry land caused</P>
+            <p>by heavy rainfall or storm surges.</p>
+            <p>Preparedness tips:</p>
+            <ul id="Preparedness">
+                <li>Avoid walking or driving through flood waters</li>
+                <li>Elevate electrical appliances</li>
+                <li>Have a family evacuation plan</li>
+    
+            </ul>
+            <a href="Others.html">learn more</a>
+          </div>
+
+
+
+      </div>
+
+
+      <div class="Hold4">      
+        <div class="newset" style="margin-left: 10%;margin-top: 5%; width: 33%;" >
+          <img src="af56f42d403bd16dc38e7e69f855e498.png" alt="Wildfire" style="height: 200px; width: 265px;" >
+  
+          <h1 style="margin-left: 4%;">Wildfires</h1>
+          <P>A fast-spreading, uncontrolled fire that burns in forests, grasslands, or other natural areas, </P>
+          <p> often caused by dry conditions, lightning, or human activity.</p>
+          <p>Preparedness tips:</p>
+          <ul id="Preparedness">
+              <li>Secure outdoor objects.</li>
+              <li>Stock emergency supplies (food, water, batteries).</li>
+              <li>Know you evacuation route</li>
+  
+          </ul>
+          <a href="Others.html">learn more</a>
+        </div>
+  
+  
+        <div class="newset" style="margin-left: 10%;margin-top: 5%;">
+          <img src="79320eca7fb28e97a5b6b70dafbe5fc3.png" alt="EarthQuake" style="height: 200px; width: 265px;">
+  
+          <h1 style="margin-left: 4%;">Tsunami</h1>
+          <P>A series of large ocean waves caused by underwater earthquakes,</P>
+          <p> volcanic eruptions, or landslides.</p>
+          <p>Preparedness tips:</p>
+          <ul id="Preparedness">
+              <li>identify safe evacuation routes and locations</li>
+              <li>Make a disaster kit with essential supplies. </li>
+  
+          </ul>
+          <a href="Others.html">learn more</a>
+        </div>
+  
+  
+          <div class="newset" style="margin-left: 10%;margin-top: 5%; width: 33%; " >
+              <img src="1eb298a6444a9b621f731349d2a66c49.png" alt="Other Disasters" style="height: 200px; width: 265px;" >
+      
+              <h1 style="margin-left: 4%;">Other Disaster</h1>
+              <P>There are many more disasters known, each proving to be very dangerous to humanity.</P>
+              <a href="Others.html">learn more</a>
+            </div>
+        </div>
+</div>
+
+<footer>
+
+    <ul id="foot">
+        <li><a href="">Emergency Contacts</a></li>
+        <li><a href="">Resources</a></li>
+        <li><a href="">FAQ</a></li>
+    </ul>
+</footer>
+
+
+
+</body>
+</html>
