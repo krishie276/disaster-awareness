@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html  lang="en">
 <head>
     <title>Disaster Alert System - Home</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="style.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
 </head>
 <body>
-        <!-- Navigation Bar -->
-        <nav>
-            <div class="nav-container">
+      <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="reports.html">User Reports</a></li>
-                    <li><a href="map.html">Maps</a></li>
-                    <li><a href="dg.html">Disaster Guide</a></li>
-                </ul>
-            </div>
-        </nav>
-    
-        <!-- Hero Section -->
-        <header class="hero">
-            <div class="hero-content">
-                <h1>Maps</h1>
-                <p>Stay Safe. Stay Informed. Real-Time Disaster Alerts for the Caribbean</p>
-            </div>
-        </header>
-    
+                <li><a href="home.html">Home</a></li>
+                <li><a href="reports.html">User Reports</a></li>
+                <li><a href="InteractiveDisasterMap.html">Maps</a></li>
+                <li><a href="guides.html">Disaster Guide</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <section>
+    <!-- Hero Section -->
+    <header id="disaster-hero" class="hero">
+        <div class="hero-content">
+            <h1>Maps</h1>
+            <p>Stay Safe. Stay Informed. Real-Time Disaster Alerts for the Caribbean</p>
+        </div>
+    </header>
+
+    <!-- Map Section-->
+    <div id="mapRow">
+        <button id="resetBtn">Reset Zoom</button>
+      
+        <div id="mapWrapper">
+            <div id="map"></div>
+      
+            <div id="filterWrapper">
+                <img id="filterBtn" src="FilterIcon.png" alt="Filter" />
+                <div id="dropdownBox"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Section -->
+    <section id="alertSection" class="alerts">
         <h2>Real-Time Disaster Alerts</h2>
-        <input type="text" placeholder="Search for alerts...">
-        <ul>
-            <li>Disaster Type - Location - Severity - Date & Time</li>
+        <input type="text" id="searchAlerts" placeholder="Search for alerts..." />
+        <p>Disaster Type - Location - Severity - Date & Time</p>
+        <ul id="alertList"></ul> 
+      </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">Emergency Contacts</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">FAQ</a></li>
         </ul>
-    </section>
+    </footer>
+
+    <!-- Mapbox & JS-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
