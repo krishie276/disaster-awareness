@@ -216,16 +216,29 @@ async function fetchGDACSAlerts() {
       caribbeanCountries.includes(event.properties.country)
     );
   
-    const displayAlerts = caribbeanAlerts.length > 0 ? caribbeanAlerts : alerts;
-  
-    // Show a notice if no Caribbean alerts
-    if (caribbeanAlerts.length === 0) {
-      const notice = document.createElement("li");
-      notice.textContent = "⚠️ No current Caribbean alerts. Displaying global disasters instead.";
-      notice.style.fontWeight = "bold";
-      notice.style.color = "#cc0000";
-      alertList.appendChild(notice);
-    }
+    let displayAlerts = [];
+
+    if (caribbeanAlerts.length > 0) {
+          // Show Caribbean alerts first
+          displayAlerts = [...caribbeanAlerts];
+
+        // Then add global alerts not already included
+        const globalAlerts = alerts.filter(event =>
+        !caribbeanCountries.includes(event.properties.country)
+      );
+
+      displayAlerts = [...displayAlerts, ...globalAlerts];
+
+} else {
+  // No Caribbean alerts found — show global only and display a notice
+  const notice = document.createElement("li");
+  notice.textContent = "⚠️ No current Caribbean alerts. Displaying global disasters only.";
+  notice.style.fontWeight = "bold";
+  notice.style.color = "#cc0000";
+  alertList.appendChild(notice);
+
+  displayAlerts = alerts;
+}
   
     const seen = new Set();
   
