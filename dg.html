@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>Disaster Guides</title>
+    <title>Disaster</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav>
+    
+<!--Changed this-->
+      <!-- Navigation Bar -->
+      <nav>
         <div class="nav-container">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -19,23 +23,125 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-content">
-            <h1>Disaster Preparedness Guides</h1>
-            <p>Stay Safe. Stay Informed. Real-Time Disaster Alerts for the Caribbean</p>
-        </div>
-    </header>
+      <div class="hero-content">
+          <h1>Disaster Preparedness Guides</h1>
+          <p>Stay Safe. Stay Informed. Real-Time Disaster Alerts for the Caribbean</p>
+      </div>
+  </header>
 
-    <section>
-        <h2>Select a Disaster Type</h2>
-        <ul>
-            <li><a href="#hurricane">Hurricanes</a></li>
-            <li><a href="#tsunami">Tsunamis</a></li>
-            <li><a href="#wildfire">Wildfires</a></li>
+  <form class="search-bar" onsubmit="event.preventDefault();">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search disasters..."
+      oninput="filterCards()"
+    > <!--oninput allows live filtering-->
+  </form>
+
+<div class = "disaster-grid">
+    <div class="disaster-card">   
+        
+        <img src="image/hurricanes.jpg" alt="Hurricanes">
+        
+        <h2>Hurricanes</h2>
+        <p>A powerful tropical storm with heavy rain and strong winds.</p>
+        <p style="margin-top: 15px;"><strong>Preparedness tips:</strong></p>
+        <ul id="Preparedness">
+            <li>Secure outdoor objects</li>
+            <li>Stock emergency supplies(food,water,batteries)</li>
+            <li>Know you evacuation route</li>
         </ul>
-        <article id="hurricane">
-            <h3>Hurricane Preparedness</h3>
-            <p>Steps to prepare before, during, and after a hurricane.</p>
-        </article>
-    </section>
+        <a href="hurricane.html" class="learn-link">Learn More......</a>
+    </div>
+
+    <div class="disaster-card">
+        
+        <img src="image/earthquake.png" alt="Earthquake">
+        
+        <h2>Earthquake</h2>
+        <p>Sudden shaking of the ground caused by tectonic shifts.</p>
+        <p style="margin-top: 15px;"><strong>Preparedness tips:</strong></p>
+        <ul id="Preparedness">
+            <li>Drop, cover and hold on during shaking</li>
+            <li>Identify safe spots(under sturdy funiture)</li>
+            <li>Prepare an emergency kit with food, water and first-aid</li>
+        </ul>
+        <a href="earthquake.html" class="learn-link">Learn More......</a>
+    </div>
+
+
+    <div class="disaster-card" >
+            <img src="image/flood.png" alt="Flood">
+    
+            <h2>Floods</h2>
+            <p>Overflow of water onto dry land cause by heavy rainfall or storm surges.</p>
+            <p style="margin-top: 15px;"><strong>Preparedness tips:</strong></p>
+            <ul id="Preparedness">
+                <li>Avoid walking or driving through flood waters</li>
+                <li>Elevate electrical appliances</li>
+                <li>Have a family evacuation plan</li>
+    
+            </ul>
+            <a href="floods.html" class="learn-link">Learn More......</a>
+    </div>
+
+    <div class="disaster-card" >
+        
+          <img src="image/wildfire.png" alt="Wildfire">
+  
+          <h2>Wildfires</h2>
+          <p>A fast-spreading, uncontrolled fire that burns in forests, grasslands, or other natural areas, often caused by dry conditions, lightning, or human activity.</p>
+          <p style="margin-top: 15px;"><strong>Preparedness tips:</strong></p>
+          <ul id="Preparedness">
+              <li>Secure outdoor objects.</li>
+              <li>Stock emergency supplies (food, water, batteries).</li>
+              <li>Know you evacuation route</li>
+          </ul>
+          <a href="wildfire.html" class="learn-link">Learn More......</a>
+    </div>
+  
+    <div class="disaster-card">
+        
+        <img src="image/tsunami.png" alt="Tsunami">
+  
+          <h2>Tsunami</h2>
+          <p>A series of large ocean waves caused by underwater earthquakes, volcanic eruptions, or landslides.</p>
+          <p style="margin-top: 15px;"><strong>Preparedness tips:</strong></p>
+          <ul id="Preparedness">
+              <li>identify safe evacuation routes and locations</li>
+              <li>Make a disaster kit with essential supplies. </li>
+          </ul>
+          <a href="Tsunami.html" class="learn-link">Learn More......</a>
+    </div>
+  
+    <div class="disaster-card" >
+        
+              <img src="image/otherdisasters.png" alt="Other Disasters">
+      
+              <h2>Other Disaster</h2>
+              <P>There are many more disasters known, each proving to be very dangerous to humanity.</P>
+              <a href="otherDisasters.html" class="learn-link">Learn More......</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <ul class="footer-links">
+        <li><a href="emergency.html">Emergency Contacts</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+    </ul>
+</footer>
+
+<script>
+    function filterCards() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.disaster-card');
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? 'block' : 'none';
+      });
+    }
+    </script>
 </body>
 </html>
