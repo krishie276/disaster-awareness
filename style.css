@@ -39,7 +39,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: url('/image/flood.png') no-repeat center center/cover;
+    background: url('image/flood.png') no-repeat center center/cover;
     height: 250px;
     display: flex;
     align-items: center;
