@@ -605,3 +605,92 @@ ul li p {
   .disaster-text li {
     margin-bottom: 8px;        
   }
+
+/*Reports.html*/
+.report-box {
+    padding: none;
+    text-align: center;
+}
+.report-heading, h1 {
+    font-size: xx-large; 
+    text-align: center;
+}
+.report-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 120px; /* 50px row spacing, 30px column spacing */
+    padding: 40px 0;
+    text-align: left; 
+}
+.report-cards {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 2px 16px;
+    display:flex;
+    flex-direction: column;
+    border-radius: 5px; /*rounded corners*/
+    
+}
+
+.report-cards, img{
+    
+    padding-bottom: 30px; 
+    border-radius: 8px;  
+}
+
+.report-font,li {
+    font-size: small;
+}
+
+
+/* Report Form*/
+
+.reportForm {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #eae1e1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.993);
+    background-color: #3573ef66;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input, textarea, select {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.submit-button,.close-button{
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.submit-button {
+    background-color: #007BFF;
+}
+.submit-button:hover {
+    background-color: #0056b3;
+}
+.close-button {
+    background-color: #FF0000;
+    float: right;
+    
+}
+.close-button:hover {
+    background-color: #CC0000;
+}
+.report_div {
+    padding-top: 30px;
+}
+.real-alert {
+    padding-top: 30px;
+    padding-left: 50px;
+}
