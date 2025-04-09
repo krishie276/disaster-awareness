@@ -6,20 +6,6 @@
     <link rel="javascript" href="reports.js">
     
 </head>
-<style>
-    .report-box {
-        padding: none;
-        text-align: center;
-    }
-    .report-heading, h1 {
-        font-size: xx-large; 
-        text-align: center;
-    }
-    .report-cards {
-        border: 2px solid gray;
-        padding: 50px;
-    }
-</style>
 <body>
         <!-- Navigation Bar -->
         <nav>
@@ -40,57 +26,66 @@
                 <p>Stay Safe. Stay Informed. Real-Time Disaster Alerts for the Caribbean</p>
             </div>
         </header>
-  <!---->      
-    <div>
-        <section class="section report-a-disaster">
-        <h1 class="report-heading">Disaster Reports</h1><br>
-            <div class="report-box">
-                <h4>Stay aware, stay prepared—report disasters to protect your community!</h4><br><br>
-                <a href="reportsForm.html" class="btn" style="float: none;"> Create a Report</a>
+        
+     <!-- Search Report Section -->
+    <section id="reportsection" class="reports">
+        <div class="search-bar">
+            <input type="text" id="searchReports" placeholder="Search for reports..." />
+        </div>
+    </section>
+    <div class="container">
+    <!--Section to create a report-->      
+        <div>
+            <section class="section report-a-disaster">
+            <h1 class="report-heading">Disaster Reports</h1><br>
+                <div class="report-box">
+                    <h4>Stay aware, stay prepared—report disasters to protect your community!</h4><br><br>
+                    <a href="reportsForm.html" class="btn"> Create a Report</a>
+                </div>
+            </section>
+        </div>
+
+        <!--Report Category Natural-->
+        <div class ="report-container">
+        <section class="section category-natural-disasters">
+            <h2>Natural Disasters</h2><br>
+            <div class="report-cards">
+                <img src="image/otherdisasters.png" alt="Natural disasters">
+                <p>Natural disasters are powerful and often devastating events caused by Earth's natural forces.<br>
+                    They can occur anywhere and vary in impact, from localized destruction to widespread catastrophe.</p><br>
+                    <ul>
+                        <li><b>Geological Disasters:</b> Earthquakes, tsunamis, volcanic eruptions, landslides.</li>
+                        <li><b>Meteorological Disasters:</b> Hurricanes, tornadoes, blizzards, heatwaves.</li>
+                        <li><b>Hydrological Disasters:</b> Floods, storm surges, droughts.</li>
+                        <li><b>Volcanic Eruptions:</b> Explosive discharge of lava, ash, and gases from a volcano.</li>
+                        <li><b>Biological Disasters:</b> Pandemics, pest infestations.</li>
+                    </ul>
+                <a href="#">Veiw Reports</a>
+            </div>
+        </section>
+        
+        <!--Report Category Man-Made-->
+        <section class="section category-manmade-disasters">
+            <h2>Man-Made Disasters</h2><br>
+            <div class="report-cards" > 
+                <img src="image/Man-Made-Disasters.jpg" alt="Neclear Explosions, Oil Spills, Hazard Zones">
+                <p>Man-made disasters are catastrophic events caused by human actions, either intentional or accidental.<br>
+                    They often result in significant harm to people, property, and the environment.</p><br>
+                    <ul>
+                        <li><b>Industrial Accidents:</b> Explosions, chemical spills, or factory fires, such as the Bhopal gas tragedy.</li>
+                        <li><b>Nuclear Disasters:</b> Radiation leaks or reactor meltdowns, like the Chernobyl disaster.</li>
+                        <li><b>Transportation Accidents:</b> Large-scale crashes involving planes, trains, or ships.</li>
+                        <li><b>Environmental Damage:</b> Deforestation, pollution, or oil spills, such as the Deepwater Horizon spill.</li>
+                        <li><b>Conflict and War:</b> Bombings, armed conflicts, or acts of terrorism.</li>
+                        <li><b>Technological Failures:</b> Power grid failures, cyber attacks.</li>
+                    </ul>
+                <a href="#">Veiw Reports</a>
             </div>
         </section>
     </div>
-
-    <!--Report Category Natural-->
-    <section class="section category-natural-disasters">
-        <h2>Natural Disasters</h2><br>
-        <div class="report-cards">
-            <p>Natural disasters are powerful and often devastating events caused by Earth's natural forces.
-                They can occur anywhere and vary in impact, from localized destruction to widespread catastrophe.</p><br>
-                <ul>
-                    <li><b>Geological Disasters:</b> Earthquakes, tsunamis, volcanic eruptions, landslides.</li>
-                    <li><b>Meteorological Disasters:</b> Hurricanes, tornadoes, blizzards, heatwaves.</li>
-                    <li><b>Hydrological Disasters:</b> Floods, storm surges, droughts.</li>
-                    <li><b>Volcanic Eruptions:</b> Explosive discharge of lava, ash, and gases from a volcano.</li>
-                    <li><b>Biological Disasters:</b> Pandemics, pest infestations.</li>
-                </ul>
-            <a href="#">Veiw Reports</a>
-        </div>
-    </section>
-    
-    <!--Report Category Man-Made-->
-    <section class="section category-manmade-disasters">
-        <h2>Man-Made Disasters</h2><br>
-        <div class="report-cards"> 
-            <p>Man-made disasters are catastrophic events caused by human actions, either intentional or accidental.
-                They often result in significant harm to people, property, and the environment.</p><br>
-                <ul>
-                    <li><b>Industrial Accidents:</b> Explosions, chemical spills, or factory fires, such as the Bhopal gas tragedy.</li>
-                    <li><b>Nuclear Disasters:</b> Radiation leaks or reactor meltdowns, like the Chernobyl disaster.</li>
-                    <li><b>Transportation Accidents:</b> Large-scale crashes involving planes, trains, or ships.</li>
-                    <li><b>Environmental Damage:</b> Deforestation, pollution, or oil spills, such as the Deepwater Horizon spill.</li>
-                    <li><b>Conflict and War:</b> Bombings, armed conflicts, or acts of terrorism.</li>
-                    <li><b>Technological Failures:</b> Power grid failures, cyber attacks.</li>
-                </ul>
-            <a href="#">Veiw Reports</a>
-        </div>
-    </section>
+    </div>
     <!-- Footer -->
     <footer>
-        <!-- <table class="footer-links">
-            <tr><th>Emergency Contacts</th> <th>Resources</th> <th>FAQ</th></tr>
-            <tr> </tr>
-        </table> -->
         <ul class="footer-links">
             <li><a href="emergency.html">Emergency Contacts</a></li>
             <li><a href="resources.html">Resources</a></li>
