@@ -694,3 +694,18 @@ input, textarea, select {
     padding-top: 30px;
     padding-left: 50px;
 }
+/*Veiw Reports*/
+div.report-veiw {
+    border: 3px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 2px 16px;
+    display:flex;
+    flex-direction: column;
+    border-radius: 5px; /*rounded corners*/
+    width:  400px;
+    height: fit-content;
+}
+.report-veiw, img{
+    width: 100%;
+    height: 250px;
+}
